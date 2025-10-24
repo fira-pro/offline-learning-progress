@@ -8,9 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "npm run db:migrate npm run build && vite preview",
-    "deploy": "npm run build && wrangler deploy",
-    "db:migrate": "wrangler d1 migrations apply prod-d1-offline-learning-progress --local",
-    "db:migrate:remote": "wrangler d1 migrations apply prod-d1-offline-learning-progress --remote",
+    "deploy": "npm run build && npx wrangler deploy",
+    "db:migrate": "npx wrangler d1 migrations apply prod-d1-offline-learning-progress --local",
+    "db:migrate:remote": "npx wrangler d1 migrations apply prod-d1-offline-learning-progress --remote",
     "predeploy": "npm run db:migrate:remote"
   },
   "dependencies": {

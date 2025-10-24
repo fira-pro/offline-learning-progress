@@ -36,7 +36,7 @@ npm install
 3. Create a D1 database with name `prod-d1-offline-learning-progress`
 
 ```bash
-npm run wrangler d1 create prod-d1-offline-learning-progress
+npx wrangler d1 create prod-d1-offline-learning-progress
 ```
 
 and update the `database_id` field in `wrangler.json` with the new database ID.
@@ -75,5 +75,4 @@ npm run db:migrate:remote
 
 ### Any contributions are welcome
 
-> [!NOTE]
-> _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
+> [!NOTE] > _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
