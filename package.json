@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run db:migrate && run vite",
+    "dev": "npm run db:migrate && vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "npm run db:migrate npm run build && vite preview",
