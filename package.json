@@ -8,8 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "pnpm run build && vite preview",
-    "deploy": "pnpm run db:migrations:apply && pnpm run build && wrangler deploy",
-    "db:migrations:apply": "wrangler d1 migrations apply prod-d1-offline-learning-progress --remote --file=./schema.sql"
+    "deploy": "pnpm run db:migrations:remote && pnpm run build && wrangler deploy",
+    "db:migrations": "wrangler d1 migrations apply prod-d1-offline-learning-progress --local",
+    "db:migrations:remote": "wrangler d1 migrations apply prod-d1-offline-learning-progress --remote"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

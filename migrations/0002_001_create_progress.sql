@@ -1,0 +1,3 @@
+-- Migration number: 0002 	 2025-10-24T19:54:08.265Z
+DROP TABLE IF EXISTS Progress;
+CREATE TABLE IF NOT EXISTS Progress (Id INTEGER, UserId TEXT, LessonId INTEGER, Type TEXT, Score INTEGER, Total INTEGER,  Timestamp TEXT, Synced INTEGER);
