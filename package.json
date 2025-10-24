@@ -4,14 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "pnpm db:migrate && run vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "pnpm run build && vite preview",
+    "preview": "pnpm db:migrate pnpm run build && vite preview",
     "deploy": "pnpm run build && wrangler deploy",
-    "db:migrations": "wrangler d1 migrations apply prod-d1-offline-learning-progress --local",
-    "db:migrations:remote": "wrangler d1 migrations apply prod-d1-offline-learning-progress --remote",
-    "predeploy": "pnpm run db:migrations:remote"
+    "db:migrate": "wrangler d1 migrations apply prod-d1-offline-learning-progress --local",
+    "db:migrate:remote": "wrangler d1 migrations apply prod-d1-offline-learning-progress --remote",
+    "predeploy": "pnpm run db:migrate:remote"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

@@ -2,6 +2,8 @@
 
 This repo presents a working web app to track learning progress, supporting offline tracking with IndexedDB and syncing automatically when connected.
 
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/fira-pro/offline-learning-progress)
+
 ## Built with
 
 ### Frontend
@@ -13,7 +15,7 @@ This repo presents a working web app to track learning progress, supporting offl
 
 ### Backend
 
-- Cloudflare workers with **Hono**
+- Cloudflare Workers with **Hono**
 - Cloudflare **D1** Database
 
 ## Running locally
@@ -31,16 +33,24 @@ cd offline-learning-progress
 pnpm install
 ```
 
-3. Migrate DB
+3. Create a D1 database with name `prod-d1-offline-learning-progress`
 
 ```bash
-pnpm wrangler d1 execute prod-d1-offline-learning-progress --local --file=./schema.sql
+pnpm wrangler d1 create prod-d1-offline-learning-progress
 ```
 
-4. Run
+and update the `database_id` field in `wrangler.json` with the new database ID.
+
+4. Run the database migrations locally
 
 ```bash
-pnpm preview
+pnpm db:migrate
+```
+
+5. Run
+
+```bash
+pnpm dev
 ```
 
 ## Deploying to Cloudflare
@@ -51,8 +61,16 @@ pnpm preview
 
 #### Manual deployment
 
+Deploy to Cloudflare Workers
+
 ```bash
 pnpm deploy
+```
+
+Run the database migrations remotely
+
+```bash
+pnpm db:migrate:remote
 ```
 
 ### Any contributions are welcome
