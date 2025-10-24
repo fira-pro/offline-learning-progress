@@ -30,13 +30,13 @@ cd offline-learning-progress
 2. Installing dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 3. Create a D1 database with name `prod-d1-offline-learning-progress`
 
 ```bash
-pnpm wrangler d1 create prod-d1-offline-learning-progress
+npm run wrangler d1 create prod-d1-offline-learning-progress
 ```
 
 and update the `database_id` field in `wrangler.json` with the new database ID.
@@ -44,13 +44,13 @@ and update the `database_id` field in `wrangler.json` with the new database ID.
 4. Run the database migrations locally
 
 ```bash
-pnpm db:migrate
+npm run db:migrate
 ```
 
 5. Run
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 ## Deploying to Cloudflare
@@ -64,13 +64,13 @@ pnpm dev
 Deploy to Cloudflare Workers
 
 ```bash
-pnpm deploy
+npm run deploy
 ```
 
 Run the database migrations remotely
 
 ```bash
-pnpm db:migrate:remote
+npm run db:migrate:remote
 ```
 
 ### Any contributions are welcome
