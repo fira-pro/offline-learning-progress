@@ -31,7 +31,13 @@ cd offline-learning-progress
 pnpm install
 ```
 
-3. Run
+3. Migrate DB
+
+```bash
+pnpm wrangler d1 execute prod-d1-offline-learning-progress --local --file=./schema.sql
+```
+
+4. Run
 
 ```bash
 pnpm preview
@@ -49,7 +55,6 @@ pnpm preview
 pnpm deploy
 ```
 
-And follow the instructions
+### Any contributions are welcome
 
-> [!NOTE]
-> _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
+> [!NOTE] > _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
