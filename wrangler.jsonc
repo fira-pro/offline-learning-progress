@@ -12,7 +12,14 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "prod_d1_offline_learning_progress",
+			"database_name": "prod-d1-offline-learning-progress",
+			"database_id": "e2f2279a-c41d-423a-a94c-65d58c9868c5"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

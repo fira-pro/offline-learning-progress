@@ -1,12 +1,54 @@
-# React + Vite
+# Offline learning progress tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo presents a working web app to track learning progress, supporting offline tracking with IndexedDB and syncing automatically when connected.
 
-Currently, two official plugins are available:
+## Built with
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
 
-## Expanding the ESLint configuration
+- **React** with **MUI**
+- **Zustand** for state management
+- **Axios** for HTTP request
+- **idb** wrapper for IndexedDB
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+
+- Cloudflare workers with **Hono**
+- Cloudflare **D1** Database
+
+## Running locally
+
+1. Clone this repo
+
+```bash
+git clone https://github.com/fira-pro/offline-learning-progress
+cd offline-learning-progress
+```
+
+2. Installing dependencies
+
+```bash
+pnpm install
+```
+
+3. Run
+
+```bash
+pnpm preview
+```
+
+## Deploying to Cloudflare
+
+#### One-click auto deploy
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/fira-pro/offline-learning-progress)
+
+#### Manual deployment
+
+```bash
+pnpm deploy
+```
+
+And follow the instructions
+
+> [!NOTE] > _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_

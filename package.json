@@ -11,8 +11,15 @@
 		"deploy": "pnpm run build && wrangler deploy"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.1",
+		"@mui/material": "^7.3.4",
+		"axios": "^1.12.2",
+		"hono": "^4.10.2",
+		"idb": "^8.0.3",
 		"react": "^19.1.1",
-		"react-dom": "^19.1.1"
+		"react-dom": "^19.1.1",
+		"zustand": "^5.0.8"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.13.15",

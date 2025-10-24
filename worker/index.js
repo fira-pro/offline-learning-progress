@@ -1,13 +1,12 @@
+import { Hono } from "hono";
+import progressRouter from "./progress";
+import usersRouter from "./users";
+
+const app = new Hono();
+
+app.route("/api/users", usersRouter);
+app.route("/api/progress", progressRouter);
+
 export default {
-  fetch(request, env) {
-    const url = new URL(request.url);
-
-    if (url.pathname.startsWith("/api/")) {
-      return Response.json({
-        name: "Cloudflare",
-      });
-    }
-
-		return new Response(null, { status: 404 });
-  },
-}
+  fetch: app.fetch,
+};
