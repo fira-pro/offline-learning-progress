@@ -75,4 +75,5 @@ pnpm db:migrate:remote
 
 ### Any contributions are welcome
 
-> [!NOTE] > _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
+> [!NOTE]
+> _Check Cloudflare's official [docs](https://developers.cloudflare.com/workers/get-started/guide) to learn more about workers and D1 database_
